@@ -2,15 +2,29 @@
   <div class="app-container">
     <h1>App 根组件</h1>
     <hr />
-
+    <MyTest></MyTest>
     <div class="box">
       <!-- 渲染 Left 组件和 Right 组件 -->
+      <!-- 以标签形式使用注册好的组件 -->
+      <Left></Left>
+      <Right></Right>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+//导入需要使用的vue文件
+import Left from '@/components/Left.vue'
+import Right from '@/components/Right.vue'
+
+
+export default {
+  //2.注册组件
+  components:{
+    Left,
+    Right
+  }
+}
 </script>
 
 <style lang="less">
